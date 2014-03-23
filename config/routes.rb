@@ -1,4 +1,89 @@
 Sportsbar::Application.routes.draw do
+  
+  get 'products', to: 'products#index', as: 'products'
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # get "workshifts/index"
+  # get "workshifts/show"
+  # get "workshifts/new"
+  # get "workshifts/create"
+  # get "workshifts/edit"
+  # get "workshifts/update"
+  # get "workshifts/destroy"
+  # get "tables/index"
+  # get "tables/show"
+  # get "tables/new"
+  # get "tables/create"
+  # get "tables/edit"
+  # get "tables/update"
+  # get "tables/destroy"
+  # get "servers/index"
+  # get "servers/show"
+  # get "servers/new"
+  # get "servers/create"
+  # get "servers/edit"
+  # get "servers/update"
+  # get "servers/destroy"
+  # get "orders/index"
+  # get "orders/show"
+  # get "orders/new"
+  # get "orders/create"
+  # get "orders/edit"
+  # get "orders/update"
+  # get "orders/destroy"
+  # get "managers/index"
+  # get "managers/show"
+  # get "managers/new"
+  # get "managers/create"
+  # get "managers/edit"
+  # get "managers/update"
+  # get "managers/destroy"
+  # get "line_items/index"
+  # get "line_items/show"
+  # get "line_items/new"
+  # get "line_items/create"
+  # get "line_items/edit"
+  # get "line_items/update"
+  # get "line_items/destroy"
+  # get "employees/index"
+  # get "employees/show"
+  # get "employees/new"
+  # get "employees/create"
+  # get "employees/edit"
+  # get "employees/update"
+  # get "employees/destroy"
+  # get "customers/index"
+  # get "customers/show"
+  # get "customers/new"
+  # get "customers/create"
+  # get "customers/edit"
+  # get "customers/update"
+  # get "customers/destroy"
+  # get "categories/index"
+  # get "categories/show"
+  # get "categories/new"
+  # get "categories/create"
+  # get "categories/edit"
+  # get "categories/update"
+  # get "categories/destroy"
+  # get "products/index"
+  # get "products/show"
+  # get "products/new"
+  # get "products/create"
+  # get "products/edit"
+  # get "products/update"
+  # get "products/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
