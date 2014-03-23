@@ -7,10 +7,11 @@ class ProductsController < ApplicationController
   # This view will have access to the @products variable.
 
   def show
-  end
+    @product = Product.find(params[:id])
+  end # Loads: app/views/products/show.html.erb
 
   def new
-  end
+  end # Loads
 
   def create
   end
