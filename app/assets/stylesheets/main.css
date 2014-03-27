@@ -23,7 +23,7 @@ a:link, a:visited, a:hover, a:active {
     position: relative;
 }
 
-#header {
+header {
     padding:10px;
     padding-top: 50px;    
     height: 80px;
@@ -31,6 +31,7 @@ a:link, a:visited, a:hover, a:active {
     margin: 0 auto;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 14px;
+    background-color: #000;
 }
 
 .logo {

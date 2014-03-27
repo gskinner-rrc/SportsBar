@@ -1,5 +1,7 @@
 Sportsbar::Application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'products', to: 'products#index', as: 'products'
   get 'products/new', to: 'products#new', as: 'new_product'
   get 'products/:id', to: 'products#show', as: 'product'
@@ -9,7 +11,7 @@ Sportsbar::Application.routes.draw do
 
   # This root command does the following
   # get '/', to: products#index', as: 'root'
-  root 'products#index'
+  root to: 'products#index'
 
 
 
