@@ -1,3 +1,46 @@
 <h1>New Product</h1>
-<!-- Use a Rails helper to build our form -->
+<%= form_for @product do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <br>
+    <%= f.text_field :price %>
+  </div>
+  
+  <div>
+    <%= f.label :stock_quantity %>
+    <br>
+    <%= f.text_field :stock_quantity %>
+  </div>
+  
+  <div>
+    <%= f.label :category_id %>
+    <br>
+    <%= select_tag(:category_id, '
+          <option value="1">Alcohol</option>
+          <option value="2">Appetizers</option>
+          <option value="3">Lunch</option>
+          <option value="4">Dinner</option>
+          <option value="5">Desert</option>
+          <option value="6">Non-alcohol</option>
+        ') %>
+  </div>
+  
+  <div>
+    <%= f.submit "Create Product" %>
+  </div>
+
+<% end %>
 

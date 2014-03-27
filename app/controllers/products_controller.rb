@@ -11,9 +11,16 @@ class ProductsController < ApplicationController
   end # Loads: app/views/products/show.html.erb
 
   def new
-  end # Loads
+    @product = Product.new
+  end # Loads: app/views/products/new.html.erb
 
   def create
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to action: :index
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,4 +31,10 @@ class ProductsController < ApplicationController
 
   def destroy
   end
+  
+  private
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :stock_quantity, :category_id)
+  end
+  
 end
