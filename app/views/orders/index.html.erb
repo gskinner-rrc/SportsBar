@@ -1,2 +1,44 @@
 
  
+<div id="left_menu">
+  
+  <p class="left_menu_item">Change Table</p>
+  <p class="left_menu_item">Select Customer</p>
+  <p class="left_menu_item">Order Note</p>
+  <p class="left_menu_item">Print Bill</p>
+  <p class="left_menu_item">Add Order</p>
+  
+</div>
+
+
+<div id="order_contents_menu">
+  
+  <div id="selected_table_status">
+    <p>#22 Table: B26</p>
+    <p>Status: Unpaid</p>
+  </div>
+  
+  <div id="table_order_form">
+    <%= form_for @order do |f| %>
+
+      <%= f.text_area :status, :class => "order_form_order_details" %>
+      
+    <% end %>
+  </div>
+  
+  <div id="order_opened_last_order">
+    <p>Ticket Opened: 1:30 PM</p>
+    <p>Last Order: 2:00 PM</p>
+  </div>
+  
+  <div id="order_balance">
+    <p>Balance: $17.37</p>
+  </div>
+  
+  <div id="order_form_buttons">
+    <button class="settle">Settle</button><button class="close">Close</button>
+    
+  </div>
+  
+    
+</div>
