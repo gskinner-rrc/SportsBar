@@ -11,8 +11,10 @@
   <div id="wrapper">
     
     <div id="header">
-      <img src="logo.png">  
+      <%= image_tag "logo.png", :class => "logo" %>
+      <p class="datetime"><%= Time.now.to_s(:long_ordinal) %></p>
     </div>
+    <div class="clear"></div>
 
     <div id="content">
       <%= yield %>
