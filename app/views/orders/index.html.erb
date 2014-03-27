@@ -42,3 +42,57 @@
   
     
 </div>
+
+<div id="categories_menu">
+  
+  <p class="category_menu_item">Alcohol</p>
+  <p class="category_menu_item">Appetizers</p>
+  <p class="category_menu_item">Lunch</p>
+  <p class="category_menu_item">Dinner</p>
+  <p class="category_menu_item">Desert</p>
+  <p class="category_menu_item">Non-alcohol</p>
+
+  
+</div>
+
+<div id="order_input_menu">
+  
+  <div id="select_item_menu">
+    <div class="select_item_menu_item">
+      <%= image_tag "jalapeno_and_crispy_onion_prime_rib_burger.png" %>
+      <p>Jalapeno and Crispy Onion Prime Rib Burger</p>
+    </div>
+        <div class="select_item_menu_item">
+      <%= image_tag "hawaiian_pizza.png" %>
+      <p>Hawaiian Pizza</p>
+    </div>
+
+    
+  </div>
+  
+  <div id="table_order_form">
+    <%= form_for @order do |f| %>
+
+      <%= f.text_area :status, :class => "order_form_order_details" %>
+      
+    <% end %>
+  </div>
+  
+  <div id="order_opened_last_order">
+    <p>Ticket Opened: 1:30 PM</p>
+    <p>Last Order: 2:00 PM</p>
+  </div>
+  
+  <div id="order_balance">
+    <p>Balance: $17.37</p>
+  </div>
+  
+  <div id="order_form_buttons">
+    <button class="settle">Settle</button><button class="close">Close</button>
+    
+  </div>
+  
+    
+</div>
+
+
