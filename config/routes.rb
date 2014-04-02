@@ -7,6 +7,8 @@ Sportsbar::Application.routes.draw do
   get 'products/:id', to: 'products#show', as: 'product'
   post 'products', to: 'products#create'
 
+  get 'admin', to: 'admin#index', as: 'admin'
+
   get 'orders', to: 'orders#index', as: 'orders'
 
   # This root command does the following

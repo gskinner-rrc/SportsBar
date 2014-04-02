@@ -1,3 +1,58 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+section {
+    text-align: center;
+    
+    .food_menu {
+        background: url('/assets/food_menu.png');
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 30px;
+    }
+
+    .food_menu:hover {
+       background: url('/assets/food_menu_hover.png');
+    }
+
+    .pos_console {
+        background: url('/assets/pos_console.png');
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 30px;
+    }
+
+    .pos_console:hover {
+       background: url('/assets/pos_console_hover.png');
+    }
+
+    .manager_reports {
+        background: url('/assets/manager_reports.png');
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 30px;
+    }
+
+    .manager_reports:hover {
+       background: url('/assets/manager_reports_hover.png');
+    }
+
+    .system_admin {
+        background: url('/assets/system_admin.png');
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        margin: 30px;
+    }
+
+    .system_admin:hover {
+       background: url('/assets/system_admin_hover.png');
+    }
+    
+}
+
