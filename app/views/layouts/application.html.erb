@@ -10,17 +10,17 @@
   
   <div id="wrapper">
     
-    <header>
+    <div id="gsb_header">
       <%= image_tag "logo.png", :class => "logo" %>
       <p class="datetime"><%= Time.now.to_s(:long_ordinal) %></p>
-    </header>
+    </div>
     <div class="clear"></div>
 
     <div id="content">
       <%= yield %>
     </div>
     
-    <div id="footer">
+    <div id="gsb_footer">
       Copyright 2014 - Graeme Skinner
     </div>
     
