@@ -11,7 +11,7 @@ Sportsbar::Application.routes.draw do
 
   # This root command does the following
   # get '/', to: products#index', as: 'root'
-  root to: 'products#index'
+  root to: 'welcome#index'
 
 
 
