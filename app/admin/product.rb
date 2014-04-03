@@ -8,10 +8,28 @@ permit_params :name, :description, :price, :stock_quantity, :category_id, :image
       f.input :description
       f.input :price
       f.input :stock_quantity
-      f.input :category_id
+      f.input :category_id, as: :select, collection: Category.all
+      #f.input :category_id
       f.input :image_filename, :as => :file
       end
     f.actions
+  end
+
+  index do
+    column :id
+    column :name
+    column :description
+    column :price, :sortable => :price do |product|
+      div :class => "price" do
+        number_to_currency product.price
+      end
+    end
+    column :stock_quantity
+    column :category_id
+    column :image_filename
+    column :created_at
+    column :updated_at
+    default_actions
   end
 
   # See permitted parameters documentation:

@@ -6,5 +6,6 @@
   <section>
     <h3><%= link_to product.name, product_path(product) %></h3>
     <p><%= product.description %></p>
+    <%= image_tag product.image_filename, :class => "food_menu_image" %>
   </section>
 <% end %>

@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @categories = Category.all
   end # Loads: app/views/products/new.html.erb
 
   def create
@@ -24,6 +25,8 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product = Product.find(params[:id])
+    @categories = Category.all
   end
 
   def update

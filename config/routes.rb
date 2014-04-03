@@ -2,7 +2,7 @@ Sportsbar::Application.routes.draw do
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'products', to: 'products#index', as: 'products'
+  get 'foodmenu', to: 'products#index', as: 'foodmenu'
   get 'products/new', to: 'products#new', as: 'new_product'
   get 'products/:id', to: 'products#show', as: 'product'
   post 'products', to: 'products#create'
