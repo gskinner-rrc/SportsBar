@@ -5,6 +5,7 @@
 
 section {
 
+margin: 50px;
 text-align: left;
 
     h3 {
@@ -12,16 +13,26 @@ text-align: left;
     }
     p {
         text-align: left;
+
+    }
+    
+    details {
+        text-align: left;
     }
     
     .food_menu_image {
         max-height: 200px;
         max-width: auto;
+        display: inline;
+        float: left;
+        margin: 15px;
     }
     
     .food_menu_image {
         max-height: auto;
         max-width: 200px;
+        display: inline;
+        float: left;
     }
 
 
