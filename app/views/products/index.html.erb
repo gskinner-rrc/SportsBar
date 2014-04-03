@@ -4,7 +4,7 @@
 
 <% @products.each do |product| %>
   <section>
-    <h3><%= link_to product.name, product_path(product) %></h3>
+    <h3><%= link_to product.name, foodmenu_show_path(product) %></h3>
     <%= image_tag product.image_filename, :class => "food_menu_image" %>
     <p><%= product.description %></p>
     <p><strong><%= number_to_currency product.price %></strong> - <%= product.category.name %></p>

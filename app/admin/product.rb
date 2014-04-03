@@ -9,7 +9,6 @@ permit_params :name, :description, :price, :stock_quantity, :category_id, :image
       f.input :price
       f.input :stock_quantity
       f.input :category_id, as: :select, collection: Category.all
-      #f.input :category_id
       f.input :image_filename, :as => :file
       end
     f.actions

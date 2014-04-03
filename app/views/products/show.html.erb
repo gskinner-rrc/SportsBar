@@ -1,6 +1,13 @@
 <section>
-  <h3><%= @product.name %></h3>
-  <p><%= @product.description %></p>
-</section>
+    <h3><%= link_to @product.name, foodmenu_show_path(@product) %></h3>
+    <%= image_tag @product.image_filename, :class => "food_menu_image" %>
+    <p><%= @product.description %></p>
+    <p><strong><%= number_to_currency @product.price %></strong> - <%= @product.category.name %></p>
+    
+  </section>
 
-<p><%= link_to 'Home', root_path %></p>
+<div class="clear"></div>
+
+<section class="foodmenu_footer">
+  <p><%= link_to 'Return to Food Menu', foodmenu_path %></p>
+</section>
