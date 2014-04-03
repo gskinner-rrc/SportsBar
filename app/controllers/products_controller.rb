@@ -27,6 +27,10 @@ class ProductsController < ApplicationController
     @categories = Category.all
   end
 
+  def foodmenu_category
+    @category = Category.find(params[:id])
+  end
+
   def update
   end
 

@@ -3,18 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$font-stack:    Tahoma, Geneva, sans-serif;
+$background: #000;
+$primary_text: #9BADA1;
+$link: #fff;
+$link_hover: #38678B;
+$menu_item_bg: #333;
+
+
 section {
 
 margin: 50px;
 text-align: left;
 
-    h3 {
-        text-align: left;
+    a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
     }
     
-    p {
-        text-align: left;
+    a:link, a:visited {
+        color: $link;
+    }
+    
+    a:hover, a:active {
+        color: $link_hover;
+    }
 
+    h3 {
+        text-align: left;
     }
     
     details {
@@ -34,18 +49,28 @@ text-align: left;
         max-width: 200px;
         display: inline;
         float: left;
+        margin: 15px;
+    }
+    
+    .foodmenu_item {
+        padding: 10px;
+        background-color: $menu_item_bg;
+        height: 200px;
+        
+        .foodmenu_item_details {
+            display: inline;
+        }
+        
+        p {
+            text-align: left;
+        }
+    }
+    
+    .foodmenu_footer {
+        padding: 100px 0;
     }
 }
 
-.foodmenu_footer {
-padding: 100px 0;
-}
 
-nav {
 
-span {
-    background-color: #000;
-    color: #fff;
-}
-    
-}
+
