@@ -4,7 +4,7 @@ Sportsbar::Application.routes.draw do
   ActiveAdmin.routes(self)
   get 'foodmenu', to: 'products#index', as: 'foodmenu'
   get 'foodmenu/:id', to: 'products#show', as: 'foodmenu_show'
-  
+  get 'foodmenu/categories/:id', to: 'products#foodmenu_category', as: 'foodmenu_category'
   
   
   get 'products/new', to: 'products#new', as: 'new_product'

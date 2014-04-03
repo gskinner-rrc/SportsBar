@@ -1,15 +1,14 @@
-<h1>Food Menu</h1>
+<h1>Food Menu - <%= @category.name %></h1>
 
 <ul>
-
+  <li><%= link_to 'All', foodmenu_path %></li>
 <% @categories.each do |category| %>
   <li><%= link_to category.name, foodmenu_category_path(category) %></li>
 <% end %>
 </ul>
 
-<%= paginate @products %>
-
-<% @products.each do |product| %>
+  
+<% @category.products.each do |product| %>
   <section>
     <div class="foodmenu_item">
       
@@ -24,10 +23,11 @@
   </section>
   
   <div class="clear"></div>
-  
 <% end %>
+  
+  
   
   <div class="clear"></div>
   <section class="foodmenu_footer">
-    <p><%= link_to 'Return to Main Menu', root_path %></p>
+    <p><%= link_to 'Return to Food Menu', foodmenu_path %></p>
   </section>

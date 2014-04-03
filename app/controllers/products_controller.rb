@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all.page(params[:page]).per(5)
+    @categories = Category.all
     
   end
 
@@ -29,6 +30,7 @@ class ProductsController < ApplicationController
 
   def foodmenu_category
     @category = Category.find(params[:id])
+    @categories = Category.all
   end
 
   def update
