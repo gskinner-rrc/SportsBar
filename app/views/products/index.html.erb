@@ -1,13 +1,30 @@
+
 <h1>Food Menu</h1>
 
-<ul>
+<%= form_tag(foodmenu_path, :method => "get", id: "search") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Food Menu..." %>
+  <%= select_tag "category_id", content_tag(:option,'',:value=>"")+options_from_collection_for_select(Category.all, "id", "name") %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
 
+<ul>
+<% if params[:search] %>
+<li><%= link_to 'Display All', foodmenu_path %></li>
+<% end %>
 <% @categories.each do |category| %>
   <li><%= link_to category.name, foodmenu_category_path(category) %></li>
 <% end %>
 </ul>
 
+<div class="clear"></div>
+<% if !params[:search] %>
 <%= paginate @products %>
+<% end %>
+<div class="clear"></div>
+
+<% if @products.count == 0 %>
+  <p><%= "Sorry, no results found" %></p>
+<% end %>
 
 <% @products.each do |product| %>
   <section>

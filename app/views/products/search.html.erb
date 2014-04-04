@@ -1,0 +1,37 @@
+
+<h1>Food Menu</h1>
+
+
+<ul>
+
+<% @categories.each do |category| %>
+  <li><%= link_to category.name, foodmenu_category_path(category) %></li>
+<% end %>
+</ul>
+
+<div class="clear"></div>
+<%= paginate @products %>
+<div class="clear"></div>
+
+<% @products.each do |product| %>
+  <section>
+    <div class="foodmenu_item">
+      
+      <h3><%= link_to product.name, foodmenu_show_path(product) %></h3>
+      <%= image_tag product.image_filename, :class => "food_menu_image" %>
+      <div class="foodmenu_item_details">
+        <p><%= product.description %></p>
+        <p><strong><%= number_to_currency product.price %></strong> - <%= product.category.name %></p>
+      </div>
+    </div>
+    
+  </section>
+  
+  <div class="clear"></div>
+  
+<% end %>
+  
+  <div class="clear"></div>
+  <section class="foodmenu_footer">
+    <p><%= link_to 'Return to Main Menu', root_path %></p>
+  </section>

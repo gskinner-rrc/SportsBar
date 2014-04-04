@@ -1,8 +1,16 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all.page(params[:page]).per(5)
+    if params[:page]
+      @products = Product.all.page(params[:page]).per(5)
+    elsif params[:category_id].to_i != 0
+        category =  Category.find(params[:category_id])
+        @products = category.products.search(params[:search])
+    elsif params[:search]
+      @products = Product.search(params[:search])
+    else
+      @products = Product.all.page(params[:page]).per(5)
+    end
     @categories = Category.all
-    
   end
 
   def show
@@ -29,8 +37,11 @@ class ProductsController < ApplicationController
   end
 
   def foodmenu_category
+    id = params[:id]
+    
     @category = Category.find(params[:id])
     @categories = Category.all
+    @products = Product.where("category_id = ?", id).page(params[:page]).per(5)
   end
 
   def update

@@ -1,5 +1,11 @@
 <h1>Food Menu - <%= @category.name %></h1>
 
+<%= form_tag(foodmenu_path, :method => "get", id: "search") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Food Menu..." %>
+  <%= select_tag "category_id", content_tag(:option,'',:value=>"")+options_from_collection_for_select(Category.all, "id", "name") %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <ul>
   <li><%= link_to 'All', foodmenu_path %></li>
 <% @categories.each do |category| %>
@@ -7,6 +13,9 @@
 <% end %>
 </ul>
 
+<div class="clear"></div>
+<%= paginate @products %>
+<div class="clear"></div>  
   
 <% @category.products.each do |product| %>
   <section>
@@ -19,9 +28,7 @@
         <p><strong><%= number_to_currency product.price %></strong> - <%= product.category.name %></p>
       </div>
     </div>
-    
   </section>
-  
   <div class="clear"></div>
 <% end %>
   
