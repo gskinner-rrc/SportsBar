@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$font-stack:    Tahoma, Geneva, sans-serif;
+$font_stack:    Tahoma, Geneva, sans-serif;
 $background: #000;
 $primary_text: #9BADA1;
 $link: #fff;
@@ -124,8 +124,9 @@ section {
     background: #101010;
     color: #feffff;
     color: #666;
-    font: 16px/30px sans-serif;
+    font: 18px/30px $font_stack;
     margin-left: 50px;
+    
     
     .page, .first, .prev, .next, .last {
         display: inline-block;

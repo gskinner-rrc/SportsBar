@@ -1,14 +1,14 @@
 class ProductsController < ApplicationController
   def index
     if params[:page]
-      @products = Product.all.page(params[:page]).per(5)
+      @products = Product.all.page(params[:page]).per(5).order('name ASC')
     elsif params[:category_id].to_i != 0
         category =  Category.find(params[:category_id])
-        @products = category.products.search(params[:search])
+        @products = category.products.search(params[:search]).order('name ASC')
     elsif params[:search]
-      @products = Product.search(params[:search])
+      @products = Product.search(params[:search]).order('name ASC')
     else
-      @products = Product.all.page(params[:page]).per(5)
+      @products = Product.all.page(params[:page]).per(5).order('name ASC')
     end
     @categories = Category.all
   end
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
     
     @category = Category.find(params[:id])
     @categories = Category.all
-    @products = Product.where("category_id = ?", id).page(params[:page]).per(5)
+    @products = Product.order('name ASC').where("category_id = ?", id).page(params[:page]).per(5)
   end
 
   def update
