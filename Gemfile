@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'carrierwave'
 gem 'kaminari'
+gem 'haml'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
