@@ -4,9 +4,9 @@ class ProductsController < ApplicationController
       @products = Product.all.page(params[:page]).per(5).order('name ASC')
     elsif params[:category_id].to_i != 0
         category =  Category.find(params[:category_id])
-        @products = category.products.search(params[:search]).order('name ASC')
+        @products = category.products.search(params[:search])
     elsif params[:search]
-      @products = Product.search(params[:search]).order('name ASC')
+      @products = Product.search(params[:search])
     else
       @products = Product.all.page(params[:page]).per(5).order('name ASC')
     end

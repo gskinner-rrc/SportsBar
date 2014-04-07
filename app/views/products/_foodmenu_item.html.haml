@@ -1,0 +1,10 @@
+%section
+  .foodmenu_item
+    %h3= link_to product.name, foodmenu_show_path(product)
+    = image_tag product.image_filename, :class => "food_menu_image"
+    .foodmenu_item_details
+      %p= product.description
+      %p
+        %strong= number_to_currency product.price
+        \- #{product.category.name}
+.clear

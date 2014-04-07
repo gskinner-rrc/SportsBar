@@ -1,0 +1,4 @@
+= form_tag(foodmenu_path, :method => "get", id: "search_form") do
+  = text_field_tag :search, params[:search], placeholder: "Search Food Menu..."
+  = select_tag "category_id", content_tag(:option,'Entire Menu',:value=>"")+options_from_collection_for_select(Category.all, "id", "name")
+  = submit_tag "Search", :name => nil
